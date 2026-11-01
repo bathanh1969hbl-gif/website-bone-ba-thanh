@@ -1,0 +1,677 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quán Ăn 396 - Bò Né & Mỳ Cay Naga | 396 Nguyễn Thị Kiểu</title>
+  <meta name="description" content="Quán Ăn 396 - Chuyên Bò Né 3 Ngon, Bò Bít Tết & Mỳ Cay Naga chuẩn vị tại 396 Nguyễn Thị Kiểu, Phường Tân Thới Hiệp. Đặt món nhanh qua Zalo: 0392755766.">
+  <style>
+/* ==========================================================================
+   GIAO DIỆN CHUẨN RESPONSIVE (MOBILE-FIRST) - QUÁN BÒ NÉ & MỲ CAY NAGA
+   Địa chỉ: 396 Nguyễn Thị Kiểu, Phường Tân Thới Hiệp | Zalo: 0392755766
+   ========================================================================== */
+
+:root {
+  --primary-red: #b91c1c;
+  --primary-red-dark: #7f1d1d;
+  --accent-amber: #d97706;
+  --accent-gold: #fbbf24;
+  --bg-light: #ffffff;
+  --bg-cream: #fffbeb;
+  --bg-warm: #fef2f2;
+  --text-dark: #1f2937;
+  --text-muted: #4b5563;
+  --border-color: #e5e7eb;
+  --success-green: #15803d;
+  --zalo-blue: #0068ff;
+  --shadow-soft: 0 4px 15px rgba(0, 0, 0, 0.07);
+  --shadow-strong: 0 10px 25px rgba(185, 28, 28, 0.15);
+  --radius-md: 12px;
+  --radius-lg: 16px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  color: var(--text-dark);
+  background-color: var(--bg-light);
+  line-height: 1.6;
+}
+
+body {
+  padding-bottom: 76px; /* Chừa khoảng trống cho thanh nút nổi trên điện thoại */
+}
+
+.container {
+  width: 100%;
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+/* 1. STICKY HEADER */
+.sticky-header {
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  background: rgba(255, 255, 255, 0.97);
+  border-bottom: 2px solid #fee2e2;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.header-inner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  gap: 10px;
+}
+
+.brand-box {
+  display: flex;
+  flex-direction: column;
+}
+
+.brand-logo {
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: var(--primary-red);
+  text-decoration: none;
+  letter-spacing: -0.3px;
+}
+
+.brand-sub {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  font-weight: 600;
+}
+
+.main-nav {
+  display: flex;
+  gap: 14px;
+  overflow-x: auto;
+  padding: 4px 0;
+}
+
+.main-nav a {
+  text-decoration: none;
+  color: var(--text-dark);
+  font-weight: 600;
+  font-size: 0.9rem;
+  white-space: nowrap;
+  padding: 6px 10px;
+  border-radius: 8px;
+  transition: background 0.2s, color 0.2s;
+}
+
+.main-nav a:hover {
+  background: var(--bg-warm);
+  color: var(--primary-red);
+}
+
+.btn-call-top {
+  background: var(--primary-red);
+  color: #fff;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 0.9rem;
+  padding: 8px 14px;
+  border-radius: 999px;
+  display: inline-block;
+  transition: transform 0.2s, background 0.2s;
+}
+
+.btn-call-top:hover {
+  background: var(--primary-red-dark);
+  transform: translateY(-1px);
+}
+
+/* 2. HERO SECTION & HIỆU ỨNG KHÓI BAY (@keyframes steam) */
+.hero-section {
+  background: linear-gradient(135deg, #7f1d1d 0%, #991b1b 55%, #b45309 100%);
+  color: #ffffff;
+  padding: 40px 0 52px;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 32px;
+  align-items: center;
+}
+
+.badge-location {
+  display: inline-block;
+  background: rgba(251, 191, 36, 0.2);
+  border: 1px solid var(--accent-gold);
+  color: var(--accent-gold);
+  padding: 6px 14px;
+  border-radius: 999px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  margin-bottom: 14px;
+}
+
+.hero-text h1 {
+  font-size: 2rem;
+  line-height: 1.25;
+  margin-bottom: 14px;
+  font-weight: 800;
+}
+
+.hero-desc {
+  font-size: 1.02rem;
+  color: #fef3c7;
+  margin-bottom: 24px;
+  max-width: 600px;
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.btn-primary {
+  background: var(--accent-gold);
+  color: #7f1d1d;
+  font-weight: 800;
+  text-decoration: none;
+  padding: 12px 22px;
+  border-radius: 999px;
+  font-size: 0.98rem;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s, background 0.2s;
+}
+
+.btn-primary:hover {
+  background: #fde047;
+  transform: translateY(-2px);
+}
+
+.btn-secondary {
+  background: rgba(255, 255, 255, 0.15);
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  font-weight: 700;
+  text-decoration: none;
+  padding: 12px 22px;
+  border-radius: 999px;
+  font-size: 0.98rem;
+  transition: background 0.2s;
+}
+
+.btn-secondary:hover {
+  background: rgba(255, 255, 255, 0.25);
+}
+
+/* Khung minh họa chảo bò né & khói bay */
+.hero-visual {
+  position: relative;
+  background: rgba(255, 255, 255, 0.1);
+  border: 2px solid rgba(251, 191, 36, 0.35);
+  border-radius: var(--radius-lg);
+  padding: 28px 20px;
+  text-align: center;
+  backdrop-filter: blur(6px);
+}
+
+.skillet-box {
+  position: relative;
+  display: inline-block;
+  margin-bottom: 12px;
+}
+
+.skillet-icon {
+  font-size: 4.2rem;
+  display: inline-block;
+}
+
+.steam-wrap {
+  position: absolute;
+  top: -24px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 10px;
+}
+
+.steam-line {
+  width: 6px;
+  height: 24px;
+  background: rgba(255, 255, 255, 0.65);
+  border-radius: 999px;
+  filter: blur(2px);
+  animation: steam 2.2s infinite ease-in-out;
+}
+
+.steam-line:nth-child(2) {
+  animation-delay: 0.4s;
+  height: 30px;
+}
+
+.steam-line:nth-child(3) {
+  animation-delay: 0.8s;
+}
+
+@keyframes steam {
+  0% {
+    transform: translateY(8px) scaleX(1);
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.85;
+  }
+  100% {
+    transform: translateY(-18px) scaleX(1.3);
+    opacity: 0;
+  }
+}
+
+.hero-visual h3 {
+  font-size: 1.3rem;
+  color: var(--accent-gold);
+  margin-bottom: 6px;
+}
+
+.hero-visual p {
+  font-size: 0.92rem;
+  color: #fef3c7;
+}
+
+/* 3. SECTION CHUNG */
+.section {
+  padding: 48px 0;
+}
+
+.section-alt {
+  background-color: var(--bg-cream);
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.section-header h2 {
+  font-size: 1.75rem;
+  color: var(--primary-red);
+  font-weight: 800;
+  margin-bottom: 8px;
+}
+
+.section-header p {
+  color: var(--text-muted);
+  font-size: 0.98rem;
+}
+
+/* 4. THỰC ĐƠN NỔI BẬT */
+.menu-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+
+.menu-card {
+  background: var(--bg-light);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  padding: 20px;
+  box-shadow: var(--shadow-soft);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.menu-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-strong);
+}
+
+.menu-tag {
+  display: inline-block;
+  background: var(--bg-warm);
+  color: var(--primary-red);
+  font-size: 0.78rem;
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: 999px;
+  margin-bottom: 10px;
+  width: fit-content;
+}
+
+.menu-card h3 {
+  font-size: 1.2rem;
+  margin-bottom: 8px;
+  color: var(--text-dark);
+}
+
+.menu-card p {
+  font-size: 0.92rem;
+  color: var(--text-muted);
+  margin-bottom: 16px;
+}
+
+.menu-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-top: 1px dashed var(--border-color);
+  padding-top: 12px;
+}
+
+.price-label {
+  font-size: 1.08rem;
+  font-weight: 800;
+  color: var(--primary-red);
+}
+
+.btn-order-item {
+  background: var(--zalo-blue);
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 0.86rem;
+  font-weight: 700;
+  padding: 8px 14px;
+  border-radius: 8px;
+  transition: opacity 0.2s;
+}
+
+.btn-order-item:hover {
+  opacity: 0.9;
+}
+
+/* 5. ĐIỂM KHÁC BIỆT */
+.features-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 18px;
+}
+
+.feature-box {
+  background: #ffffff;
+  border-left: 4px solid var(--primary-red);
+  padding: 18px;
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-soft);
+}
+
+.feature-box h3 {
+  font-size: 1.1rem;
+  color: var(--primary-red-dark);
+  margin-bottom: 6px;
+}
+
+.feature-box p {
+  font-size: 0.92rem;
+  color: var(--text-muted);
+}
+
+/* 6. LIÊN HỆ & ĐỊA CHỈ */
+.contact-box {
+  background: var(--bg-warm);
+  border: 1px solid #fecaca;
+  border-radius: var(--radius-lg);
+  padding: 28px 20px;
+  text-align: center;
+}
+
+.contact-box h3 {
+  font-size: 1.4rem;
+  color: var(--primary-red);
+  margin-bottom: 10px;
+}
+
+.contact-info {
+  list-style: none;
+  margin: 16px 0 24px;
+}
+
+.contact-info li {
+  margin-bottom: 8px;
+  font-size: 1rem;
+}
+
+.contact-actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+}
+
+/* 7. FOOTER */
+.site-footer {
+  background: #111827;
+  color: #9ca3af;
+  text-align: center;
+  padding: 28px 16px;
+  font-size: 0.88rem;
+}
+
+.site-footer strong {
+  color: #ffffff;
+}
+
+/* 8. THANH NÚT NỔI TRÊN ĐIỆN THOẠI (STICKY BOTTOM BAR) */
+.mobile-bottom-bar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #ffffff;
+  border-top: 1px solid var(--border-color);
+  box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.08);
+  display: flex;
+  padding: 10px 16px;
+  gap: 10px;
+  z-index: 1000;
+}
+
+.mobile-btn {
+  flex: 1;
+  text-align: center;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 0.92rem;
+  padding: 10px 12px;
+  border-radius: 10px;
+  color: #ffffff;
+}
+
+.mobile-btn-call {
+  background: var(--primary-red);
+}
+
+.mobile-btn-zalo {
+  background: var(--zalo-blue);
+}
+
+/* RESPONSIVE DESKTOP & TABLET */
+@media (min-width: 768px) {
+  .hero-grid {
+    grid-template-columns: 1.2fr 0.8fr;
+  }
+  .hero-text h1 {
+    font-size: 2.5rem;
+  }
+  .menu-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .features-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .mobile-bottom-bar {
+    display: none;
+  }
+  body {
+    padding-bottom: 0;
+  }
+}
+  </style>
+</head>
+<body>
+
+  <!-- 1. STICKY HEADER -->
+  <header class="sticky-header">
+    <div class="container header-inner">
+      <div class="brand-box">
+        <a href="#" class="brand-logo">QUÁN ĂN 396</a>
+        <span class="brand-sub">Bò Né 3 Ngon - Bò Bít Tết & Mỳ Cay Naga</span>
+      </div>
+      <nav class="main-nav">
+        <a href="#thuc-don">Thực đơn</a>
+        <a href="#diem-noi-bat">Điểm nổi bật</a>
+        <a href="#lien-he">Địa chỉ & Liên hệ</a>
+      </nav>
+      <a href="tel:0392755766" class="btn-call-top">Gọi: 0392 755 766</a>
+    </div>
+  </header>
+
+  <!-- 2. HERO SECTION -->
+  <section class="hero-section">
+    <div class="container hero-grid">
+      <div class="hero-text">
+        <span class="badge-location">396 Nguyễn Thị Kiểu, Phường Tân Thới Hiệp</span>
+        <h1>Bò Né Xèo Xèo Nóng Hổi & Mỳ Cay Naga Chuẩn Vị</h1>
+        <p class="hero-desc">
+          Thưởng thức chảo bò né thơm lừng, bít tết mềm ngọt cùng mỳ cay 7 cấp độ đậm đà. Phục vụ tận tâm tại quán và nhận đặt món nhanh qua Zalo.
+        </p>
+        <div class="hero-actions">
+          <a href="https://zalo.me/0392755766" target="_blank" rel="noopener" class="btn-primary">Đặt Món Qua Zalo Ngay</a>
+          <a href="#thuc-don" class="btn-secondary">Xem Thực Đơn</a>
+        </div>
+      </div>
+
+      <div class="hero-visual">
+        <div class="skillet-box">
+          <div class="steam-wrap">
+            <span class="steam-line"></span>
+            <span class="steam-line"></span>
+            <span class="steam-line"></span>
+          </div>
+          <span class="skillet-icon">🍳</span>
+        </div>
+        <h3>Chảo Gang Nóng Hổi</h3>
+        <p>Thịt bò mềm ngọt, pate béo ngậy, trứng ốp la lòng đào kèm bánh mì giòn rụm.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. THỰC ĐƠN CHÍNH -->
+  <section id="thuc-don" class="section">
+    <div class="container">
+      <div class="section-header">
+        <h2>Thực Đơn Đặc Trưng Tại Quán 396</h2>
+        <p>Chọn món yêu thích và nhắn Zalo để quán chuẩn bị nóng hổi cho bạn</p>
+      </div>
+
+      <div class="menu-grid">
+        <div class="menu-card">
+          <div>
+            <span class="menu-tag">Bán chạy nhất</span>
+            <h3>Bò Né 3 Ngon Đặc Biệt</h3>
+            <p>Thịt bò tươi mềm, pate thơm béo, trứng ốp la, xúc xích/chả kèm salad dầu giấm và bánh mì nóng giòn.</p>
+          </div>
+          <div class="menu-footer">
+            <span class="price-label">Liên hệ giá ưu đãi</span>
+            <a href="https://zalo.me/0392755766" target="_blank" rel="noopener" class="btn-order-item">Đặt qua Zalo</a>
+          </div>
+        </div>
+
+        <div class="menu-card">
+          <div>
+            <span class="menu-tag">Đậm đà</span>
+            <h3>Bò Bít Tết Sốt Đậm Đà</h3>
+            <p>Miếng bò bít tết áp chảo chín tới, giữ trọn vị ngọt tự nhiên, dùng kèm khoai tây chiên, salad và bánh mì.</p>
+          </div>
+          <div class="menu-footer">
+            <span class="price-label">Liên hệ giá ưu đãi</span>
+            <a href="https://zalo.me/0392755766" target="_blank" rel="noopener" class="btn-order-item">Đặt qua Zalo</a>
+          </div>
+        </div>
+
+        <div class="menu-card">
+          <div>
+            <span class="menu-tag">Nóng hổi 7 cấp độ</span>
+            <h3>Mỳ Cay Naga Thập Cẩm / Bò / Hải Sản</h3>
+            <p>Sợi mỳ dai ngon hòa quyện trong nước dùng chua cay chuẩn vị, đầy đặn tôm, mực, thịt bò, cá viên và nấm.</p>
+          </div>
+          <div class="menu-footer">
+            <span class="price-label">Liên hệ giá ưu đãi</span>
+            <a href="https://zalo.me/0392755766" target="_blank" rel="noopener" class="btn-order-item">Đặt qua Zalo</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. ĐIỂM NỔI BẬT -->
+  <section id="diem-noi-bat" class="section section-alt">
+    <div class="container">
+      <div class="section-header">
+        <h2>Vì Sao Thực Khách Yêu Thích Quán Ăn 396?</h2>
+        <p>Tận tâm trong từng phần ăn từ hơn một thập kỷ phục vụ khách hàng</p>
+      </div>
+
+      <div class="features-grid">
+        <div class="feature-box">
+          <h3>Nguyên Liệu Tươi Ngon Mỗi Ngày</h3>
+          <p>Thịt bò, hải sản và rau củ luôn được tuyển chọn kỹ lưỡng mỗi sáng, giữ trọn độ tươi ngọt tự nhiên.</p>
+        </div>
+        <div class="feature-box">
+          <h3>Lên Món Nhanh - Luôn Nóng Hổi</h3>
+          <p>Chảo gang giữ nhiệt giúp món bò né và mỳ cay luôn sôi xèo xèo thơm phức khi đặt lên bàn.</p>
+        </div>
+        <div class="feature-box">
+          <h3>Đặt Món Tiện Lợi Qua Điện Thoại & Zalo</h3>
+          <p>Nhận đặt bàn trước hoặc chuẩn bị món mang về nhanh chóng, không phải chờ đợi lâu.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. LIÊN HỆ & ĐỊA CHỈ -->
+  <section id="lien-he" class="section">
+    <div class="container">
+      <div class="contact-box">
+        <h3>Ghé Quán Ăn 396 Hoặc Đặt Món Ngay</h3>
+        <p>Hân hạnh phục vụ quý khách bữa sáng, bữa trưa và bữa tối ấm cúng bên gia đình, bạn bè.</p>
+        <ul class="contact-info">
+          <li><strong>Địa chỉ:</strong> 396 Nguyễn Thị Kiểu, Phường Tân Thới Hiệp, Quận 12, TP. Hồ Chí Minh</li>
+          <li><strong>Điện thoại / Zalo:</strong> <a href="tel:0392755766">0392 755 766</a></li>
+        </ul>
+        <div class="contact-actions">
+          <a href="tel:0392755766" class="btn-call-top">Gọi Điện Đặt Món</a>
+          <a href="https://zalo.me/0392755766" target="_blank" rel="noopener" class="btn-order-item">Nhắn Tin Zalo (0392755766)</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6. FOOTER -->
+  <footer class="site-footer">
+    <div class="container">
+      <p><strong>QUÁN ĂN 396 - BÒ NÉ 3 NGON, BÒ BÍT TẾT & MỲ CAY NAGA</strong></p>
+      <p>Địa chỉ: 396 Nguyễn Thị Kiểu, Phường Tân Thới Hiệp, Quận 12, TP.HCM | Zalo: 0392755766</p>
+    </div>
+  </footer>
+
+  <!-- 7. THANH NÚT NỔI TRÊN ĐIỆN THOẠI -->
+  <div class="mobile-bottom-bar">
+    <a href="tel:0392755766" class="mobile-btn mobile-btn-call">📞 Gọi Ngay</a>
+    <a href="https://zalo.me/0392755766" target="_blank" rel="noopener" class="mobile-btn mobile-btn-zalo">💬 Nhắn Zalo</a>
+  </div>
+
+</body>
+</html>
